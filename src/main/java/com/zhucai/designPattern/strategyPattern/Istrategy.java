@@ -6,6 +6,7 @@ package com.zhucai.designPattern.strategyPattern;
  * @Date: 2020/12/8 11:15
  *
  */
+@SuppressWarnings("all")
 public interface Istrategy {
     public void operate();
 }

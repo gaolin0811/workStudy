@@ -5,6 +5,7 @@ package com.zhucai.designPattern.strategyPattern;
  * @Auth: GaoLin
  * @Date: 2020/12/8 11:24
  */
+@SuppressWarnings("all")
 public class Content {
     private Istrategy istrategy;
 

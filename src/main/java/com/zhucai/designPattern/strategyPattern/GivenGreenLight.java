@@ -5,6 +5,7 @@ package com.zhucai.designPattern.strategyPattern;
  * @Auth: GaoLin
  * @Date: 2020/12/8 11:21
  */
+@SuppressWarnings("all")
 public class GivenGreenLight implements Istrategy {
     @Override
     public void operate() {

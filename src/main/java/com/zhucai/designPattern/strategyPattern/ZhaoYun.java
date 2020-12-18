@@ -5,6 +5,7 @@ package com.zhucai.designPattern.strategyPattern;
  * @Auth: GaoLin
  * @Date: 2020/12/8 11:27
  */
+@SuppressWarnings("all")
 public class ZhaoYun {
     public static void main(String[] args) {
         Content content;
