@@ -1,4 +1,4 @@
-package com.zhucai.designPattern.adapterPattern;
+package com.zhucai.designPattern.facadePattern;
 
 /**
  * @Desc:使用场景类
@@ -7,6 +7,7 @@ package com.zhucai.designPattern.adapterPattern;
  * 那这个过程与高内聚的要求相差甚远，你想，你要知道这四个步骤，而且还要知道这四个步骤的顺序，
  * 一旦出错，信就不可能邮寄出去
  */
+@SuppressWarnings("all")
 public class Client {
     public static void main(String[] args) {
         LetterProcess letterProcess = new LetterProcessImpl();

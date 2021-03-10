@@ -1,4 +1,4 @@
-package com.zhucai.designPattern.adapterPattern;
+package com.zhucai.designPattern.facadePattern;
 
 /**
  * @Desc: 发送信件中转类
@@ -17,6 +17,7 @@ package com.zhucai.designPattern.adapterPattern;
  * 能把人逼疯，使用门面模式后，对门面进行单元测试，约束项目成员的代码质量，对项目整体质量的提升
  * 也是一个比较好的帮助。
  */
+@SuppressWarnings("all")
 public class ModenPostOffice {
     LetterProcess letterProcess = new LetterProcessImpl();
     Police letterPolice = new Police();

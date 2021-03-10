@@ -1,10 +1,11 @@
-package com.zhucai.designPattern.adapterPattern;
+package com.zhucai.designPattern.facadePattern;
 
 /**
  * @Desc: 邮递接口实现类
  * @Auth: GaoLin
  * @Date: 2020/12/14 15:51
  */
+@SuppressWarnings("all")
 public class LetterProcessImpl implements LetterProcess {
     @Override
     public void writeContent(String content) {
