@@ -26,6 +26,7 @@ import static java.time.temporal.ChronoUnit.MINUTES;
  * @Auth: GaoLin
  * @Date: 2022/7/28 17:26
  */
+
 public class LocalDateTimeTest {
 
     @Test
@@ -111,7 +112,7 @@ public class LocalDateTimeTest {
     **/
     @Test
     public void localDateTimeConvertToTime() {
-        long time = new Date().getTime();
+        long time = System.currentTimeMillis();
         System.out.println("java时间戳：" + time);
         DateTimeFormatter dateTimeFormatter3 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         Instant instant = Instant.ofEpochMilli(time);
