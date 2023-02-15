@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 
 /**
  * @Desc: LocalDate工具类
@@ -50,18 +52,18 @@ public class LocalDateUtil {
     /**
      * 本月第一天
      */
-    //public static LocalDate thisMonthFirstDay(String date, DateTimeFormatter dateTimeFormatter) {
-    //    LocalDate localDate = LocalDate.parse(date, dateTimeFormatter);
-    //    return localDate.with(firstDayOfMonth());
-    //}
+    public static LocalDate thisMonthFirstDay(String date, DateTimeFormatter dateTimeFormatter) {
+        LocalDate localDate = LocalDate.parse(date, dateTimeFormatter);
+        return localDate.with(TemporalAdjusters.firstDayOfMonth());
+    }
 
     /**
      * 上月第一天
      */
-    //public static LocalDate lastMonthFirstDay(String date, DateTimeFormatter dateTimeFormatter) {
-    //    LocalDate localDate = LocalDate.parse(date, dateTimeFormatter);
-    //    return localDate.minusMonths(1).with(firstDayOfMonth());
-    //}
+    public static LocalDate lastMonthFirstDay(String date, DateTimeFormatter dateTimeFormatter) {
+        LocalDate localDate = LocalDate.parse(date, dateTimeFormatter);
+        return localDate.minusMonths(1).with(TemporalAdjusters.firstDayOfMonth());
+    }
 
     /**
      * 两个时间之间间隔了多少年
