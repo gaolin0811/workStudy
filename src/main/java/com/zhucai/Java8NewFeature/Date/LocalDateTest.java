@@ -229,6 +229,12 @@ public class LocalDateTest {
         System.out.println("zonedDateTime = " + zonedDateTime);
     }
 
+    @Test
+    public void untilLocalDate() {
 
+        LocalDate localDate = LocalDate.parse("2023-06-23",DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        long until  = localDate.until(LocalDate.now()).getDays();
+        System.out.println("until = " + until);
+    }
 
 }

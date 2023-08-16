@@ -296,6 +296,9 @@ public class StreamTest {
         //8、groupingBy(按条件分组，以城市对用户进行分组；)
         Map<String,List<User>> groupCity = userList.stream().collect(Collectors.groupingBy(User::getCity));
         System.out.println("groupCity = " + groupCity);
+
+        Map<String,List<User>> groupCountCity = userList.stream().collect(Collectors.groupingBy(User::getCity));
+        System.out.println("groupCountCity = " + groupCountCity);
         //9、orElse(null)
         //10、orElseGet(null)
 

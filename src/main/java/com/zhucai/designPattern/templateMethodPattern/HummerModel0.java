@@ -1,4 +1,4 @@
-package com.zhucai.designPattern.TemplateMethodPattern;
+package com.zhucai.designPattern.templateMethodPattern;
 
 /**
  * @Desc: 悍马模型抽象类
