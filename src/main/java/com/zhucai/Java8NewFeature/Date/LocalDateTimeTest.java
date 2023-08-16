@@ -15,6 +15,8 @@ import java.time.Month;
 import java.time.Period;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalUnit;
 import java.util.Date;
 
 import static java.time.temporal.ChronoUnit.DAYS;
@@ -26,6 +28,7 @@ import static java.time.temporal.ChronoUnit.MINUTES;
  * @Auth: GaoLin
  * @Date: 2022/7/28 17:26
  */
+
 public class LocalDateTimeTest {
 
     @Test
@@ -111,7 +114,7 @@ public class LocalDateTimeTest {
     **/
     @Test
     public void localDateTimeConvertToTime() {
-        long time = new Date().getTime();
+        long time = System.currentTimeMillis();
         System.out.println("java时间戳：" + time);
         DateTimeFormatter dateTimeFormatter3 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         Instant instant = Instant.ofEpochMilli(time);
@@ -315,10 +318,10 @@ public class LocalDateTimeTest {
         duration.toMinutes();
         System.out.println("天 = " + duration.toDays() + "; 时 = " + duration.toHours() + "; 分 = " + duration.toMinutes());
 
-        System.out.println("-----"+now.until(localDateTimeEnd, DAYS));
-        System.out.println("-----"+now.until(localDateTimeEnd, HOURS));
-        System.out.println("-----"+now.until(localDateTimeEnd, MINUTES));
-        System.out.println("-----"+HOURS.between(now,localDateTimeEnd));
+        System.out.println("----->   "+now.until(localDateTimeEnd, DAYS));
+        System.out.println("----->   "+now.until(localDateTimeEnd, HOURS));
+        System.out.println("----->   "+now.until(localDateTimeEnd, MINUTES));
+        System.out.println("----->   "+HOURS.between(now,localDateTimeEnd));
         Period period2 = Period.between(now.toLocalDate(),localDateTimeEnd.toLocalDate());
         period2.getYears();
         period2.getMonths();
@@ -326,6 +329,15 @@ public class LocalDateTimeTest {
 
         System.out.println("年 = " + period2.getYears() + "; 月 = " + period2.getMonths() + "; 日 = " + period2.toTotalMonths());
 
+    }
+
+
+    @Test
+    public void untilLocalDateTime() {
+
+        LocalDateTime localDateTime = LocalDateTime.parse("2023-06-23 10:00:00",DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        long until  = localDateTime.until(LocalDateTime.now(), DAYS);
+        System.out.println("until = " + until);
     }
 
 }
