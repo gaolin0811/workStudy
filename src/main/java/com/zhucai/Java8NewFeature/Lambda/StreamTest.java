@@ -328,7 +328,10 @@ public class StreamTest {
     }
 
     public static User getMethod(String name){
+
         System.out.println(name + "执行了方法 dev meger test");
+
+        System.out.println(name + "执行了方法 dev meger master");
 
         return null;
     }
